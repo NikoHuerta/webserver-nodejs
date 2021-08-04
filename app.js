@@ -11,8 +11,8 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 
 //servir contenido estatico
-//app.use( express.static('public/react') );
-app.use( express.static('public/angular') );
+app.use( express.static('public/react') );
+//app.use( express.static('public/angular') );
 
 // //MODELO MVC
 // //--> CONTROLADOR
@@ -41,7 +41,8 @@ app.use( express.static('public/angular') );
 
 app.get('*', (req, res) => {
     // res.sendFile(__dirname + '/public/404.html');
-    res.sendFile(__dirname + '/public/angular/index.html');
+    //res.sendFile(__dirname + '/public/angular/index.html');
+    res.sendFile(__dirname + '/public/react/index.html');
 });
 
 // app.get('/hola-mundo', (req, res) => {
